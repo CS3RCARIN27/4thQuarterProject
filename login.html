@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nanotechnology: Manipulating Matter at the Nanoscale</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            overflow: auto;
+            background: linear-gradient(rgba(152, 144, 144, 0.6), rgba(46, 165, 189, 0.6)), url('login.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            height: 100vh;  
+            color: #fff;
+        }
+        .background {
+            position: auto;
+        }
+        header {
+            position: auto;
+            z-index: 1; 
+            padding: 20px;
+            padding-top: 20px;
+        }
+        .logo {
+            float: left;
+            width: 100px;
+            margin-right: 20px;
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+        h1 {
+            margin-top: 33px;
+            text-align: left;
+            color: #ffffff;
+            font-family: 'Poppins', sans-serif;
+        }
+        nav {
+            float: right;
+            margin-top: 40px;
+            margin-right: 20px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            margin: 0;
+            padding: 0;
+        }
+        nav li {
+            margin-right: 15px;
+            position: relative;
+        }
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            transition: color 0.3s ease-in-out;
+        }
+        nav a:hover {
+            color: #335ab5;
+            transform: scale(1.1);
+        }  
+        .clickable {
+            cursor: pointer;
+        }
+        .circle-image {
+            width: 80px; 
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        form {
+            max-width: 400px;
+            margin: auto;
+            padding-top: 30px;
+            border-radius: 5px;
+        }
+        input[type="text"], input[type="password"], input[type="email"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"], input[type="reset"] {
+            background-color: #396a6b;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        input[type="submit"]:hover, input[type="reset"]:hover {
+            background-color: none;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="background">
+        <header>
+            <img class="logo circle-image" src="logo3.png" alt="Header Image">
+            <h1>Nanotechnology: Manipulating Matter at the Nanoscale</h1>
+            <nav>
+                <ul>
+                    <li><a href="indexmain3.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="login.html">Sign Up</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <form id="signupForm">
+        <label for="name"> Name: </label><br>
+        <input type="text" id="name" name="name"><br>
+
+        <label for="userName"> Username: </label><br>
+        <input type="text" id="userName" name="userName"><br>
+
+        <label for="password"> Password: </label><br>
+        <input type="password" id="password" name="password"><br>
+
+        <label for="confirmPassword"> Confirm Password: </label><br>
+        <input type="password" id="confirmPassword" name="confirmPassword"><br>
+
+        <label for="email"> Email: </label><br>
+        <input type="email" id="email" name="email"><br>
+
+        <label for="address"> Address: </label><br>
+        <input type="text" id="address" name="address"><br>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            const name = document.getElementById('name').value;
+            const userName = document.getElementById('userName').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            const email = document.getElementById('email').value;
+            const address = document.getElementById('address').value;
+
+            localStorage.setItem('name', name);
+            localStorage.setItem('userName', userName);
+            localStorage.setItem('password', password);
+            localStorage.setItem('confirmPassword', confirmPassword);
+            localStorage.setItem('email', email);
+            localStorage.setItem('address', address);
+
+            window.location.href = 'indexmain3.html';
+        });
+
+        document.getElementById('signupForm').addEventListener('reset', function() {
+            localStorage.clear();
+        });
+    </script>
+</body>
+</html>
